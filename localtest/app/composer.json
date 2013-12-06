@@ -1,0 +1,15 @@
+{
+    "require": {
+        "lib/lib": "*"
+    },
+    "repositories": [
+        {
+            "type": "local",
+            "url": "../lib"
+        },
+        {
+            "type": "local",
+            "url": "../anotherlib"
+        }
+    ]
+}

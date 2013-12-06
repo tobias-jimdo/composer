@@ -299,6 +299,7 @@ class Factory
         $rm->setRepositoryClass('perforce', 'Composer\Repository\VcsRepository');
         $rm->setRepositoryClass('hg', 'Composer\Repository\VcsRepository');
         $rm->setRepositoryClass('artifact', 'Composer\Repository\ArtifactRepository');
+        $rm->setRepositoryClass('local', 'Composer\Repository\LocalRepository');
 
         return $rm;
     }
@@ -366,6 +367,7 @@ class Factory
         $dm->setDownloader('tar', new Downloader\TarDownloader($io, $config, $eventDispatcher, $cache));
         $dm->setDownloader('phar', new Downloader\PharDownloader($io, $config, $eventDispatcher, $cache));
         $dm->setDownloader('file', new Downloader\FileDownloader($io, $config, $eventDispatcher, $cache));
+        $dm->setDownloader('local', new Downloader\LocalDownloader($io, $config, $eventDispatcher, $cache));
 
         return $dm;
     }

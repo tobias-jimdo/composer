@@ -1,0 +1,13 @@
+{
+    "name": "lib/lib",
+    "version": "1.0.0",
+    "require": {
+        "anotherlib/lib": "*"
+    },
+    "repositories": [
+        {
+            "type": "local",
+            "url": "../anotherlib"
+        }
+    ]
+}
